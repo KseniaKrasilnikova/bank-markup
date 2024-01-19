@@ -1,0 +1,79 @@
+mixin header(headerMods, currentPage)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "Текст текст",
+      },
+      {
+        href: "#",
+        text: "Текст текст текст"
+      },
+      {
+        href: "#",
+        text: "Текст текст"
+      },
+      {
+        href: "#",
+        text: "Текст текст"
+      },
+      {
+        href: "#",
+        text: "Текст текст"
+      },
+      {
+        href: "#",
+        text: "Текст и текст"
+      },
+    ]
+
+
+  header.header(class=headerMods)
+    .header__content-wrapper
+      button.header__menu-btn.button.button_transparent.btn-open-menu(type="button" aria-label="Открыть меню" aria-pressed="false")
+        +icon("icon-burger", 24, 24)
+      button.header__menu-btn.button.button_transparent.btn-close-menu(type="button" aria-label="Закрыть меню" aria-pressed="false")
+        +icon("icon-cross", 14, 14)
+      .header__row
+        .header__row-content
+          if(currentPage === "main.html")
+            .header__logo
+              .header__logo-img
+                +img("content", "logo", "png", 208, 106, "Логотип компании Vimeo")
+          else
+            a.header__logo(href="main.html", aria-label="Переход на главную")
+              .header__logo-img
+                +img("content", "logo", "png", 208, 106, "Логотип компании Vimeo")
+
+          .header__nav
+            .header__nav-inner
+              .header__content
+                nav.main-nav
+                  ul.main-nav__list
+                    each link in headerLinks
+                      - const activeState = currentUrl === link.href
+                      li.main-nav__item
+                        if(activeState)
+                          span.main-nav__link.is-active=link.text
+                        else
+                          a.main-nav__link.hover-dark(href=link.href)=link.text
+
+      .bg-overlay
+
+    .mobile-nav
+      .mobile-nav__wrapper
+        .container
+          .mobile-nav__block
+            ul.mobile-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.mobile-nav__item
+                  if(activeState)
+                    span.mobile-nav__link.is-active=link.text
+                  else
+                    a.mobile-nav__link(href=link.href)=link.text
+          .mobile-nav__block
+            .header__tel-wrapper
+              a.header__tel-link(href="tel:+78001111111") +7 (800) 111-111-1
+              a.header__tel-callback(href="#" aria-label="Перезвоните мне") Перезвоните мне
+

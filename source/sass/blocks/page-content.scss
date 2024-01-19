@@ -1,0 +1,11 @@
+.page-content {
+  margin-top: 162px;
+
+  @include vp--1279 {
+    margin-top: 276px;
+  }
+
+  @include vp--767 {
+    margin-top: 76px;
+  }
+}

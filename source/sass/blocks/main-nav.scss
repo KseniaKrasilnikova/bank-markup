@@ -1,0 +1,54 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  max-width: 52%;
+  margin-right: 77px;
+  padding: 19px 0;
+  @include vp--1919 {
+    max-width: 64%;
+    margin-right: 150px;
+  }
+  @include vp--1439 {
+    max-width: 71%;
+    margin-right: 260px;
+  }
+  @include vp--1279 {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  &__list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 6px;
+    font-size: 16px;
+    @include vp--1023 {
+      font-size: 14px;
+    }
+    @include vp--767 {
+      display: none;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    padding: 9px 12px;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid rgba(55, 69, 74, 0.2);
+    }
+    @include vp--1023 {
+      padding: 8px;
+    }
+  }
+
+  &__link {
+    color: $color-default-white;
+    text-align: center;
+  }
+}
+
+
+
+

@@ -1,0 +1,5 @@
+mixin pictureFancy(path, image, format, width, height, altText, className, galleryName)
+  - var srcBest = "img/" + path + "/" + image + "@2x." + format
+  picture(data-fancybox=galleryName, href=srcBest)
+    source(type='image/webp', srcset="img/" + path + "/" + image + "@1x.webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x")
+    img(src="img/" + path + "/" + image + "@1x." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText, class= className)
