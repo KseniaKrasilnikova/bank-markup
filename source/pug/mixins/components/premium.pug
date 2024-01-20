@@ -1,0 +1,28 @@
+mixin premium()
+  .premium
+    button.premium__close.button(type="button" aria-label="Hide")
+      +icon("icon-cross-bold", 8, 9).premium__close-icon
+    .premium__features
+      h3.premium__title Invoicing Premium
+      ul.premium__list
+        li.premium__item
+          span.premium__icon-wrapper
+            +icon("icon-check", 14, 10).premium__check-icon
+          | Unlimited outgoing e-invoices
+        li.premium__item
+          span.premium__icon-wrapper
+            +icon("icon-check", 14, 10).premium__check-icon
+          | Unlimited connected banks
+        li.premium__item
+          span.premium__icon-wrapper
+            +icon("icon-check", 14, 10).premium__check-icon
+          | 10 users
+        li.premium__item
+          span.premium__icon-wrapper
+            +icon("icon-check", 14, 10).premium__check-icon
+          | Expense management
+    .premium__prices
+      .premium__price €20.99 /mo
+      .premium__terms billed annually or 24.99 € billed monthly
+      a(href="#" aria-label="Upgrade plan").premium__link.button.button_accent Upgrade
+

@@ -1,0 +1,75 @@
+.premium {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 40px;
+  background-color: $color-bg-light;
+  border-radius: 12px;
+  &__title {
+    margin: 0 0 14px;
+    font-size: 24px;
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    color: $color-text-accent;
+  }
+  &__close {
+    position: absolute;
+    right: 37.5px;
+    top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $color-transparent;
+    transition: color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 768px) {
+      &:hover .premium__close-icon,
+      &:focus .premium__close-icon {
+        color: $color-accent-main;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+  &__close-icon {
+    width: 8px;
+    height: 8px;
+    color: $color-text-accent;
+    transition: color $trans-default;
+  }
+  &__features {
+    display: flex;
+    flex-direction: column;
+  }
+  &__list {
+    @include reset-list;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &__icon-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+  }
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

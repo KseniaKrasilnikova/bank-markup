@@ -1,0 +1,70 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all $trans-default;
+
+  &_main {
+    width: fit-content;
+    height: 32px;
+    padding: 8px 16px;
+    font-weight: 600;
+    background-color: $color-text-accent;
+    color: $color-default-white;
+    border-radius: 8px;
+    &:focus-visible {
+      outline: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        background-color: $color-accent-main;
+      }
+    }
+  }
+
+  &_secondary {
+    width: fit-content;
+    height: 32px;
+    padding: 8px 16px 8px 12px;
+    font-weight: 600;
+    background-color: rgba(84, 29, 232, 0.12);
+    color: $color-text-accent;
+    border-radius: 8px;
+    &:focus-visible {
+      outline: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        background-color: $color-accent-main;
+        color: $color-default-white;
+      }
+    }
+  }
+  &_accent {
+    width: fit-content;
+    height: 32px;
+    padding: 8px 16px;
+    font-weight: 600;
+    background-color: $color-accent-main;
+    color: $color-default-white;
+    border-radius: 8px;
+    &:focus-visible {
+      outline: none;
+    }
+
+    @media (hover: hover), screen and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        background-color: $color-nero;
+        color: $color-accent-main;
+      }
+    }
+  }
+}

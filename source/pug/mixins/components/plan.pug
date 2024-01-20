@@ -1,0 +1,17 @@
+mixin plan()
+  .plan
+    .plan__info
+      .plan__top
+        h2.plan__title Invoicing Start
+        a(href="#" aria-label="Change plan").plan__change.hover-accent Change plan
+      .plan__price-block 6,99 €&nbsp;
+        span.plan__term /mo
+      .plan__info-block
+        .plan__charge We’ll charge 6,99 € on Jul&nbsp;&nbsp;24, 2020
+        a(href="#" aria-label="Change card or billing info").plan__link.hover-accent Change card *** 5423&nbsp;&nbsp;or billing info
+      .plan__switch-block
+        a(href="#" aria-label="Change card or billing info").plan__switch.button.button_main Switch to annual plan
+        span.plan__save and save 24,00 € a year
+    .plan__features
+      h3.plan__subtitle Explore new features
+      +premium()

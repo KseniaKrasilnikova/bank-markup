@@ -19,11 +19,14 @@
 @import "components/form-profile";
 @import "components/data-tabs";
 @import "components/tabs";
+@import "components/plan";
+@import "components/limits";
+@import "components/premium";
 
 // Blocks
 //---------------------------------
 @import "blocks/bg-overlay";
-@import "blocks/button";
+@import "components/button";
 @import "blocks/header";
 @import "blocks/main-nav";
 @import "blocks/mobile-nav";

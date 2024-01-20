@@ -35,9 +35,9 @@ mixin header(headerMods, currentPage)
 
   header.header(class=headerMods)
     .header__content-wrapper
-      button.header__menu-btn.header__menu-btn_open.button.button_transparent.js-btn-open-menu(type="button" aria-label="Open menu" aria-pressed="false")
+      button.header__menu-btn.header__menu-btn_open.button.js-btn-open-menu(type="button" aria-label="Open menu")
         +icon("icon-burger", 24, 24).header__burger-icon
-      button.header__menu-btn.header__menu-btn_close.button.button_transparent.js-btn-close-menu(type="button" aria-label="Close menu" aria-pressed="false")
+      button.header__menu-btn.header__menu-btn_close.button.js-btn-close-menu(type="button" aria-label="Close menu")
         +icon("icon-cross", 14, 14).header__burger-icon
       .header__row
         .header__row-content

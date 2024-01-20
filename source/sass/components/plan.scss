@@ -1,0 +1,91 @@
+.plan {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px;
+  background-color: $color-default-white;
+  border-radius: 16px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__info {
+    border-bottom: 1px solid rgba(34, 43, 85, 0.08);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  &__title {
+    margin: 0;
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    font-size: 36px;
+  }
+  &__change {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: $color-text-accent;
+  }
+  &__price-block {
+    margin-bottom: 20px;
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  &__term {
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(34, 43, 85, 0.6);
+  }
+  &__info-block {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    margin-bottom: 18px;
+  }
+  &__charge {
+    color: $color-fade;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  &__link {
+    font-size: 14px;
+    color: $color-text-accent;
+  }
+  &__switch-block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    margin-bottom: 40px;
+  }
+  &__features {
+    display: flex;
+    flex-direction: column;
+    padding-top: 39px;
+  }
+  &__subtitle {
+    position: relative;
+    width: max-content;
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: -32px;
+      width: 24px;
+      height: 24px;
+      content: "";
+      background-image: -webkit-image-set(url("../img/content/dizzy.png") 1x, url("../img/content/dizzy@2x.png") 2x);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
