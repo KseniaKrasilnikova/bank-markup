@@ -1,5 +1,6 @@
 import {initBurger} from './modules/init-burger-action';
 import {initSelect} from './modules/init-custom-select';
+import {initTabs} from './modules/init-tabs';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initBurger();
     initSelect();
+    initTabs();
   });
 });
 

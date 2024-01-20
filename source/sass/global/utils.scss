@@ -62,20 +62,6 @@
   transition: none !important;
 }
 
-.hover-secondary {
-  transition: color $trans-default;
-
-  @media (hover: hover), screen and (min-width: 768px) {
-    &:hover,
-    &:focus{
-      color: $color-dark-green;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-  }
-}
 .hover-accent {
   transition: color $trans-default;
 

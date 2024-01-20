@@ -7,24 +7,6 @@
   outline: none;
   transition: all $trans-default;
 
-  &_main {
-    background: linear-gradient(90deg, #6CB644 0%, #82CA2C 100%);
-    filter: drop-shadow(0px 10px 20px rgba(132, 199, 55, 0.3));
-    color: $color-default-white;
-    border: 1px solid $color-text-green;
-    border-radius: 35px;
-    @media (hover: hover), screen and (min-width: 768px) {
-      &:hover,
-      &:focus {
-        color: $color-main-gray;
-        border-color: $color-main-gray;
-      }
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-  }
   &_secondary {
     min-width: 135px;
     padding: 9px 12px;
