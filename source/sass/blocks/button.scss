@@ -6,33 +6,7 @@
   cursor: pointer;
   outline: none;
   transition: all $trans-default;
-  &__icon {
-    position: relative;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: $color-white-grey;
-    flex-shrink: 0;
-    &::after {
-      position: absolute;
-      right: 29%;
-      top: 35%;
-      width: 16px;
-      height: 16px;
-      content: "";
-      background-image: url("../img/sprite/icon-arrow.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    @include vp--374 {
-      left: -5px;
-    }
-  }
 
-  &_transparent {
-    background-color: $color-transparent;
-  }
   &_main {
     background: linear-gradient(90deg, #6CB644 0%, #82CA2C 100%);
     filter: drop-shadow(0px 10px 20px rgba(132, 199, 55, 0.3));
@@ -51,39 +25,24 @@
       outline: none;
     }
   }
-  &_light {
-    background-color: $color-default-white;
-    border: 1px solid $color-text-green;
-    border-radius: 26px;
-    @media (hover: hover), screen and (min-width: 768px) {
-      &:hover,
-      &:focus {
-        color: $color-text-green;
-        border-color: $color-main-gray;
-      }
-      }
+  &_secondary {
+    min-width: 135px;
+    padding: 9px 12px;
+    font-weight: 600;
+    background-color: rgba(84, 29, 232, 0.12);
+    color: $color-text-accent;
+    border-radius: 8px;
+    &:focus-visible {
+      outline: none;
+    }
 
-      &:focus-visible {
-        outline: none;
-      }
-  }
-  &_success {
-    color: $color-default-white;
-    background: #252525;
     @media (hover: hover), screen and (min-width: 768px) {
       &:hover,
       &:focus {
+        background-color: $color-accent-main;
         color: $color-default-white;
       }
     }
-  }
-  &_icon {
-    padding: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 

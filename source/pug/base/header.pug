@@ -3,61 +3,100 @@ mixin header(headerMods, currentPage)
     const headerLinks = [
       {
         href: "#",
-        text: "Текст текст",
+        text: "Money",
+        label: "Money",
       },
       {
         href: "#",
-        text: "Текст текст текст"
+        text: "Team",
+        label: "Team"
       },
       {
         href: "#",
-        text: "Текст текст"
+        text: "Cards",
+        label: "Cards"
       },
       {
         href: "#",
-        text: "Текст текст"
+        text: "Help center",
+        label: "Help center"
       },
       {
+        hasIcon: true,
         href: "#",
-        text: "Текст текст"
-      },
-      {
-        href: "#",
-        text: "Текст и текст"
+        text: "Invite your partners",
+        label: "Invite your partners",
+        icon: "gift",
+        iconW: "25",
+        iconH: "24",
+        iconAlt: "gift box"
       },
     ]
 
-
   header.header(class=headerMods)
     .header__content-wrapper
-      button.header__menu-btn.button.button_transparent.btn-open-menu(type="button" aria-label="Открыть меню" aria-pressed="false")
-        +icon("icon-burger", 24, 24)
-      button.header__menu-btn.button.button_transparent.btn-close-menu(type="button" aria-label="Закрыть меню" aria-pressed="false")
-        +icon("icon-cross", 14, 14)
+      button.header__menu-btn.header__menu-btn_open.button.button_transparent.js-btn-open-menu(type="button" aria-label="Open menu" aria-pressed="false")
+        +icon("icon-burger", 24, 24).header__burger-icon
+      button.header__menu-btn.header__menu-btn_close.button.button_transparent.js-btn-close-menu(type="button" aria-label="Close menu" aria-pressed="false")
+        +icon("icon-cross", 14, 14).header__burger-icon
       .header__row
         .header__row-content
           if(currentPage === "main.html")
             .header__logo
-              .header__logo-img
-                +img("content", "logo", "png", 208, 106, "Логотип компании Vimeo")
+              img.header__logo-img(src="img/svg/logo-web-full.svg", width="69", height="15", alt="Finom logo")
           else
-            a.header__logo(href="main.html", aria-label="Переход на главную")
-              .header__logo-img
-                +img("content", "logo", "png", 208, 106, "Логотип компании Vimeo")
+            a.header__logo(href="main.html", aria-label="Return to main page")
+              img.header__logo-img(src="img/svg/logo-web-full.svg", width="69", height="15", alt="Finom logo")
 
           .header__nav
-            .header__nav-inner
-              .header__content
-                nav.main-nav
-                  ul.main-nav__list
-                    each link in headerLinks
-                      - const activeState = currentUrl === link.href
-                      li.main-nav__item
-                        if(activeState)
-                          span.main-nav__link.is-active=link.text
-                        else
-                          a.main-nav__link.hover-dark(href=link.href)=link.text
+            nav.main-nav
+              ul.main-nav__list
+                each link in headerLinks
+                  - const activeState = currentUrl === link.href
+                  li.main-nav__item
+                    if(activeState)
+                      span.main-nav__link.main-nav__link_active=link.text
+                    if(link.hasIcon)
+                      a.main-nav__link.main-nav__link_icon.hover-accent(href=link.href aria-label=link.label)
+                        =link.text
+                    else
+                      a.main-nav__link.hover-accent(href=link.href aria-label=link.label)=link.text
 
+          .header__profile
+            .header__tarif
+              a(href="" aria-label="Upgrade plan").header__tarif-link.button.button_secondary Upgrade plan
+            form(action="#" method="post").form-profile
+              .form-profile__select
+                .custom-select
+                  label(for="profile").custom-select__label
+                  select(id="profile" name="profile").visually-hidden
+                    option(value="option-tesla") TESLA S.R.L.
+                    option(value="option-2") Option 2
+                    option(value="option-3") Option 3
+
+                  button.custom-select__btn(type="button" aria-label="chose the profile") TESLA S.R.L.
+                    +icon('icon-dropdown', 9, 6).custom-select__dropdown-icon
+                  .custom-select__dropdown
+                    .custom-select__wrapper
+                      ul.custom-select__list
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text TESLA S.R.L.
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text Long Text HERE
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text OPTION 3
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text OPTION 4
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text OPTION 5
+                        li.custom-select__item
+                          +icon('icon-tesla', 32, 32).custom-select__item-icon
+                          span.custom-select__item-text OPTION 6
       .bg-overlay
 
     .mobile-nav
@@ -73,7 +112,3 @@ mixin header(headerMods, currentPage)
                   else
                     a.mobile-nav__link(href=link.href)=link.text
           .mobile-nav__block
-            .header__tel-wrapper
-              a.header__tel-link(href="tel:+78001111111") +7 (800) 111-111-1
-              a.header__tel-callback(href="#" aria-label="Перезвоните мне") Перезвоните мне
-

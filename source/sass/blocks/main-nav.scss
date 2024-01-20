@@ -1,31 +1,18 @@
 .main-nav {
   display: flex;
   flex-direction: row;
-  max-width: 52%;
-  margin-right: 77px;
-  padding: 19px 0;
-  @include vp--1919 {
-    max-width: 64%;
-    margin-right: 150px;
-  }
-  @include vp--1439 {
-    max-width: 71%;
-    margin-right: 260px;
-  }
-  @include vp--1279 {
-    max-width: 100%;
-    margin-right: 0;
-  }
 
   &__list {
     @include reset-list;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 6px;
-    font-size: 16px;
-    @include vp--1023 {
-      font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 14px;
+    font-size: 18px;
+    @include vp--1279 {
+      column-gap: 20px;
     }
+
     @include vp--767 {
       display: none;
     }
@@ -33,19 +20,40 @@
   &__item {
     display: flex;
     justify-content: center;
-    padding: 9px 12px;
-
-    &:not(:last-of-type) {
-      border-right: 1px solid rgba(55, 69, 74, 0.2);
-    }
+    align-items: center;
     @include vp--1023 {
       padding: 8px;
     }
   }
 
   &__link {
-    color: $color-default-white;
+    padding: 3px 0;
     text-align: center;
+    &_icon {
+      position: relative;
+      margin-left: 13px;
+      padding-left: 21px;
+
+      &::before {
+        position: absolute;
+        left: -12px;
+        top: -2px;
+        width: 25px;
+        height: 24px;
+        content: "";
+        //background-image: url("../img/content/gift.png");
+        background-image: -webkit-image-set(url("../img/content/gift.png") 1x, url("../img/content/gift@2x.png") 2x);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__icon-img {
+    flex-shrink: 0;
+    width: 25px;
+    height: 24px;
+    margin-right: 8px;
   }
 }
 

@@ -1,0 +1,146 @@
+.custom-select {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+
+  &__dropdown-icon  {
+    position: absolute;
+    top: 39%;
+    right: 5px;
+    width: 10px;
+    height: 7px;
+    color: $color-main-text;
+    transition: all $trans-default;
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 0 0 0 8px;
+    font-size: 18px;
+    color: $color-main-text;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: $color-bg;
+    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all $trans-default;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      content: "";
+      background-image: url("../img/svg/ava-tesla.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-text-accent;
+      background-color: $color-bg-light;
+      .custom-select__dropdown-icon {
+        color: $color-text-accent;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__item:hover,
+  &__item:focus,
+  .same-as-selected {
+    color: $color-main-text;
+    border-radius: 3px;
+  }
+
+  /* when the select box is open: */
+  &._open {
+    .custom-select__dropdown-icon {
+      transform: scale(1, -1);
+    }
+    .custom-select__btn {
+      background-color: $color-bg-light;
+    }
+
+    .custom-select__dropdown {
+      z-index: 10;
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $color-bg;
+      @include vp--767 {
+        background-color: $color-default-white;
+      }
+    }
+
+    .custom-select__wrapper {
+      margin: 10px 0;
+    }
+
+    .custom-select__list {
+      @include reset-list;
+      max-height: 132px;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      font-size: 18px;
+      color: $color-main-text;
+      transition: all $trans-default;
+      &::-webkit-scrollbar {
+        width: 7px;
+        height: 8px;
+        background-color: $color-bg-light;
+        border-radius: 3px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-fade;
+        border-radius: 3px;
+      }
+    }
+    .custom-select__item-text {
+      display: contents;
+      max-width: 100%;
+      line-height: 1.1;
+      text-transform: uppercase;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 1;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      word-wrap: break-word;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+    .custom-select__item {
+      display: flex;
+      align-items: center;
+      padding: 8px 1px;
+      cursor: pointer;
+      &:first-of-type {
+        padding-top: 0;
+      }
+      &:hover,
+      &:focus {
+        color: $color-text-accent;
+      }
+    }
+    .custom-select__item-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+  }
+}

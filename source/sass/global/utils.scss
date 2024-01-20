@@ -76,13 +76,13 @@
     }
   }
 }
-.hover-dark {
+.hover-accent {
   transition: color $trans-default;
 
   @media (hover: hover), screen and (min-width: 768px) {
     &:hover,
     &:focus{
-      color: $color-main-gray;
+      color: $color-accent-main;
     }
 
     &:focus-visible {
@@ -91,6 +91,3 @@
   }
 }
 
-.text-accent {
-  color: $color-accent-green;
-}
