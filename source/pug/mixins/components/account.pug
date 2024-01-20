@@ -1,20 +1,21 @@
 mixin account()
   section.account
-    .container
+    .container.container_no-mobile
       .account__content
         h2.visually-hidden Personal account menu
         .tabs(data-tabs="parent" data-delay="300")
           .tabs__controls(data-tabs="controls")
-            .tabs__controls-grop
+            .tabs__controls-group
               h3.tabs__title Personal
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="0") Profile
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="1") Security
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="2") Notifications
-            .tabs__controls-grop
-              h3.tabs__title Tesla s.r.L.
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="3") Profile
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="4") Security
-              button.tabs__control.btn(type="button" data-tabs="control" data-index="5") Notifications
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="0" aria-label="Profile") Profile
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="1" aria-label="Security") Security
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="2" aria-label="Notifications") Notifications
+            .tabs__controls-group
+              h3.tabs__title.tabs__title_mb Tesla s.r.L.
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="3" aria-label="Business profile") Business profile
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="4" aria-label="E-invoicing") E-invoicing
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="5" aria-label="Plan and limits") Plan and limits
+              button.tabs__control.hover-accent(type="button" data-tabs="control" data-index="5" aria-label="Team") Team
           .tabs__content(data-tabs="content")
             .tabs__element(data-tabs="element")
               .tabs__inner Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>

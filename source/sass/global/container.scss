@@ -8,17 +8,17 @@
   //  padding: 0 34px;
   //}
   //
-  //@include vp--1279 {
-  //  padding: 0 32px;
-  //}
+  @include vp--1279 {
+    padding: 0 32px;
+  }
 
   @include vp--767 {
     max-width: 100%;
-    //padding: 0 18px;
+    padding: 0 18px;
   }
-  //&_no-mobile {
-  //  @include vp--767 {
-  //    padding: 0;
-  //  }
-  //}
+  &_no-mobile {
+    @include vp--767 {
+      padding: 0;
+    }
+  }
 }
