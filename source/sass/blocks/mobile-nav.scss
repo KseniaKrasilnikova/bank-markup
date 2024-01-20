@@ -21,6 +21,9 @@
     height: auto;
     background-color: $color-default-white;
     padding: 20px 0 28px;
+    @include vp--767 {
+      top: -33px;
+    }
   }
   &__list {
     @include reset-list;
@@ -30,16 +33,7 @@
 
   &__item {
     margin-bottom: 12px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 24px;
-  }
-
-  &__link {
-    color: $color-nero;
-  }
-
-  &__select {
-    padding: 0;
-    color: $color-nero;
   }
 }

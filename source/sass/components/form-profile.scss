@@ -1,6 +1,9 @@
 .form-profile {
   &__select {
     width: 172px;
+    @include vp--374 {
+      width: 142px;
+    }
   }
   .custom-select__btn {
     @include vp--1023 {
