@@ -47,9 +47,6 @@
     @include vp--1279 {
       margin-right: 0;
     }
-    @include vp--1023 {
-      margin: 0;
-    }
     @include vp--767 {
       width: 50px;
       min-width: fit-content;
@@ -115,6 +112,7 @@
   &__tarif-link {
     position: relative;
     padding-left: 36px;
+    width: max-content;
 
     &::before {
       position: absolute;
