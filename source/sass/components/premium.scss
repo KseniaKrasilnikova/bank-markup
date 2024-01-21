@@ -110,6 +110,9 @@
     line-height: 16px;
     text-align: right;
     color: $color-fade;
+    @include vp--767 {
+      text-align: center;
+    }
   }
   &__price {
     font-family: $font-family--montserrat;

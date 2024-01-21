@@ -69,12 +69,12 @@ mixin header(headerMods, currentPage)
               .form-profile__select
                 .custom-select
                   label(for="profile").custom-select__label
-                  select(id="profile" name="profile").visually-hidden
+                  select(id="profile" name="profile" aria-label="Chose profile").visually-hidden
                     option(value="option-tesla") TESLA S.R.L.
                     option(value="option-2") Option 2
                     option(value="option-3") Option 3
 
-                  button.custom-select__btn(type="button" aria-label="chose the profile") TESLA S.R.L.
+                  button.custom-select__btn(type="button" aria-label="TESLA S.R.L.") TESLA S.R.L.
                     +icon('icon-dropdown', 9, 6).custom-select__dropdown-icon
                   .custom-select__dropdown
                     .custom-select__wrapper
