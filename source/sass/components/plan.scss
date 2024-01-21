@@ -35,7 +35,9 @@
   &__change {
     height: 100%;
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
+    margin-left: 18px;
     font-size: 16px;
     color: $color-text-accent;
   }
@@ -93,14 +95,16 @@
   }
   &__subtitle {
     position: relative;
-    width: max-content;
+    width: fit-content;
+    max-width: 90%;
     margin: 0 0 20px;
     font-size: 20px;
     font-family: $font-family--montserrat;
     font-weight: 700;
+
     &::after {
       position: absolute;
-      top: 0;
+      bottom: 0;
       right: -32px;
       width: 24px;
       height: 24px;
