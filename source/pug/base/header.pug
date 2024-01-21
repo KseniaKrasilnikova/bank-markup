@@ -109,5 +109,8 @@ mixin header(headerMods, currentPage)
                 li.mobile-nav__item
                   if(activeState)
                     span.mobile-nav__link.is-active=link.text
+                  if(link.hasIcon)
+                    a.main-nav__link.main-nav__link_icon.hover-accent(href=link.href aria-label=link.label)
+                      =link.text
                   else
                     a.mobile-nav__link(href=link.href)=link.text
