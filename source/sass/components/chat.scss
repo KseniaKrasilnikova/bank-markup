@@ -38,6 +38,7 @@
     display: inline-block;
     margin-bottom: 14px;
     font-weight: 600;
+    user-select: none;
   }
   &__textarea {
     width: 100%;

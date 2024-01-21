@@ -6,7 +6,7 @@ mixin billing()
         button.tabs__control.billing__control(type="button" data-tabs="control" data-index="1") Invoices
 
       .tabs__content.billing__content(data-tabs="content")
-        .tabs__element(data-tabs="element")
+        .tabs__element.billing__element(data-tabs="element")
           +limits()
-        .tabs__element(data-tabs="element")
-          p Invoices content
+        .tabs__element.billing__element(data-tabs="element")
+          +premium()
