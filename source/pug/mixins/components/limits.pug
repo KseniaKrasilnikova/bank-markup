@@ -1,3 +1,36 @@
 mixin limits()
   .limits
-    div jwhrjhertheriu
+    .limits__item
+      .bar
+        .bar__top
+          span.bar__name Team members
+          div.bar__count
+            span.bar__current 3
+            span.bar__total &nbsp;&nbsp;/&nbsp;6
+        .bar__progress
+          span.bar__foreground
+        .bar__comment Need more members?&ensp;
+          a(href="#" aria-label="Upgrade your plan").bar__link.hover-accent Upgrade your plan
+    .limits__item
+      .bar
+        .bar__top
+          span.bar__name Outgoing e-invoices
+          div.bar__count
+            span.bar__current
+            span.bar__total Unlimited
+        .bar__progress
+          span.bar__foreground.bar__foreground_full
+        .bar__comment Need more members?&ensp;
+          a(href="#" aria-label="Upgrade your plan").bar__link.hover-accent Send as many e-invoices as you want
+    .limits__item
+      .bar
+        .bar__top
+          span.bar__name Connected sources (banks)
+          div.bar__count
+            span.bar__current 5
+            span.bar__total &nbsp;&nbsp;/&nbsp;5
+        .bar__progress
+          span.bar__foreground.bar__foreground_full.bar__foreground_accent
+        .bar__comment Need more banks to connect?&ensp;
+          a(href="#" aria-label="Upgrade your plan").bar__link.hover-accent Upgrade your plan
+

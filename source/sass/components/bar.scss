@@ -1,0 +1,54 @@
+.bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 8px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+  }
+  &__count {
+    display: flex;
+    font-size: 14px;
+    color: $color-fade;
+  }
+  &__current {
+    color: $color-main-text;
+  }
+  &__comment {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: $color-fade;
+  }
+  &__link {
+    color: $color-fade;
+    text-decoration: underline;
+  }
+  &__progress {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: $color-light;
+    border-radius: 4px;
+  }
+
+  &__foreground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 8px;
+    background-color: $color-text-accent;
+    border-radius: 4px;
+    &_full {
+      width: 100%;
+    }
+    &_accent {
+      background-color: $color-accent-main;
+    }
+  }
+}
