@@ -12,11 +12,13 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "keyframes";
 
 // Components
 //---------------------------------
 @import "components/account";
 @import "components/bar";
+@import "components/chat";
 @import "components/custom-select";
 @import "components/form-profile";
 @import "components/data-tabs";

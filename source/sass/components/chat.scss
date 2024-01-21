@@ -1,0 +1,66 @@
+.chat {
+  &__btn {
+    z-index: 1;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: $color-accent-main;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: 1.6s ease 0s infinite normal none running radial-pulse;
+  }
+
+  &__icon {
+    width: 21px;
+    height: 24px;
+  }
+  &__popup {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    bottom: 15px;
+    right: 15px;
+    background-color: $color-bg-light;
+    border-radius: 16px;
+    box-shadow: 0 6px 8px 6px rgba(215, 215, 215, 0.4);
+  }
+  &__form {
+    max-width: 320px;
+    padding: 20px 18px;
+  }
+
+  &__area-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: $color-default-white;
+    resize: none;
+    border-radius: 12px;
+    border: 1px solid $color-transparent;
+
+    &:focus {
+      border: 1px solid $color-text-accent;
+      outline: none;
+    }
+  }
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  &__send,
+  &__close {
+    width: 100%;
+  }
+}

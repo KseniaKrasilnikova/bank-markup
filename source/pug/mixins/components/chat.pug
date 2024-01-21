@@ -1,0 +1,12 @@
+mixin chat()
+  .chat
+    .chat__btn.js-open-chat(title="Open chat")
+      +icon("icon-chat", 21, 25).chat__icon
+    .chat__popup(id="chatForm")
+      form(action="#").chat__form
+
+        label(for="chat-area").chat__area-label Got some questions?
+        textarea(name="chat-area" required).chat__textarea
+        .chat__controls
+          button(type="submit" aria-label="Send").button.button_main.chat__send Send
+          button(type="button" aria-label="Close").button.button_secondary.chat__close.js-close-chat Close
