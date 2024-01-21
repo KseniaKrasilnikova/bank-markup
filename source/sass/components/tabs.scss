@@ -22,9 +22,17 @@
     letter-spacing: 1px;
     &_mb {
       margin-bottom: 18px;
+      @include vp--767 {
+        margin-bottom: 0;
+      }
     }
     @include vp--767 {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       padding: 0 18px;
+      margin: 0;
+      white-space: nowrap;
     }
   }
 
@@ -34,6 +42,16 @@
     &:not(:last-of-type) {
       margin-bottom: 28px;
     }
+    @include vp--767 {
+      flex-direction: row;
+      margin-bottom: 14px;
+      &:not(:last-of-type) {
+        margin-bottom: 14px;
+      }
+      &:last-child > .tabs__control:last-of-type {
+        margin-right: 26px;
+      }
+    }
   }
   &__controls {
     display: flex;
@@ -41,6 +59,15 @@
     padding: 32px 0;
     background-color: $color-default-white;
     border-radius: 16px;
+    @include vp--767 {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 0;
+      border-radius: unset;
+    }
+
   }
   &__control {
     display: inline-flex;
@@ -60,12 +87,17 @@
 
     @include vp--767 {
       padding: 12px 18px;
+      font-size: 14px;
     }
 
     &.is-active {
       position: relative;
       font-weight: 700;
       pointer-events: none;
+      @include vp--767 {
+        background-color: $color-fade;
+        color: $color-bg-light;
+      }
     }
     &.is-active::before {
       position: absolute;
@@ -75,6 +107,9 @@
       height: 100%;
       width: 4px;
       background-color: $color-accent-main;
+      @include vp--767 {
+        display: none;
+      }
     }
   }
   &__content {
