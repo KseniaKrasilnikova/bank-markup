@@ -8,12 +8,20 @@
   @include vp--1023 {
     padding: 18px 30px;
   }
+  @include vp--767 {
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 18px 24px;
+  }
   &__title {
     margin: 0 0 14px;
     font-size: 24px;
     font-family: $font-family--montserrat;
     font-weight: 700;
     color: $color-text-accent;
+    @include vp--767 {
+      font-size: 20px;
+    }
   }
   &__close {
     position: absolute;
@@ -38,6 +46,10 @@
       &:focus-visible {
         outline: none;
       }
+    }
+    @include vp--767 {
+      right: 20px;
+      top: 18px;
     }
   }
   &__close-icon {
@@ -76,9 +88,19 @@
     align-items: flex-end;
     justify-content: end;
     max-width: 170px;
+    @include vp--767 {
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 100%;
+    }
   }
   &__link {
     margin-top: 25px;
+    @include vp--767 {
+      width: 100%;
+      max-width: 200px;
+      margin-bottom: 14px;
+    }
   }
   &__terms {
     margin-top: 8px;
@@ -92,5 +114,8 @@
     font-weight: 700;
     font-size: 24px;
     text-align: end;
+    @include vp--767 {
+      text-align: center;
+    }
   }
 }
