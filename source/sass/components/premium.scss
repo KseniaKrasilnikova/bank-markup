@@ -5,6 +5,9 @@
   padding: 24px 40px;
   background-color: $color-bg-light;
   border-radius: 12px;
+  @include vp--1023 {
+    padding: 18px 30px;
+  }
   &__title {
     margin: 0 0 14px;
     font-size: 24px;
@@ -71,5 +74,23 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: end;
+    max-width: 170px;
+  }
+  &__link {
+    margin-top: 25px;
+  }
+  &__terms {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    color: $color-fade;
+  }
+  &__price {
+    font-family: $font-family--montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: end;
   }
 }

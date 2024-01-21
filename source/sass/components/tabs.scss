@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: 304px auto;
   column-gap: 32px;
+  @include vp--1023 {
+    grid-template-columns: 234px auto;
+  }
   &__title {
     margin: 0 0 6px;
     padding: 0 32px;
